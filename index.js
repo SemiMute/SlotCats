@@ -11,7 +11,7 @@ const client = new Discord.Client({
 	partials: [ Discord.Partials.Message, Discord.Partials.Channel, Discord.Partials.User],
 	fetchAllMembers: false,
 	allowedMentions: {parse: ['users'], repliedUser: false},
-	intents: [Discord.GatewayIntentBits.Guilds, Discord.GatewayIntentBits.GuildMessages, Discord.GatewayIntentBits.GuildMembers, Discord.GatewayIntentBits.DirectMessages, Discord.GatewayIntentBits.MessageContent],
+	intents: [Discord.GatewayIntentBits.GuildMessages, Discord.GatewayIntentBits.DirectMessages, Discord.GatewayIntentBits.MessageContent],
 });
 
 client.on("messageCreate", async (message) => {
