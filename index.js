@@ -15,6 +15,7 @@ const client = new Discord.Client({
 });
 
 client.on("messageCreate", async (message) => {
+    if(!message.content) return;
     if(message.content.toLowerCase().includes(`meow`) && !message.author.bot){
         return await message.reply(`meow meow`)
     }
